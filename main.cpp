@@ -53,13 +53,12 @@ void example_query1(librdf_world *world, librdf_model *model) {
   librdf_query_results *results = execute_sparql(world, model, sparql_query);
 
   // Print Results
-  std::cout << "Results:\n";
+  std::cout << "\nTriples:\n";
   while (!librdf_query_results_finished(results)) {
     librdf_node *s = librdf_query_results_get_binding_value(results, 0);
     librdf_node *p = librdf_query_results_get_binding_value(results, 1);
     librdf_node *o = librdf_query_results_get_binding_value(results, 2);
 
-    std::cout << "- Triple: ";
     std::cout << (s ? (const char *)librdf_node_to_string(s) : "(null)") << " ";
     std::cout << (p ? (const char *)librdf_node_to_string(p) : "(null)") << " ";
     std::cout << (o ? (const char *)librdf_node_to_string(o) : "(null)") << std::endl;
@@ -95,9 +94,29 @@ void example_query2(librdf_world *world, librdf_model *model) {
   librdf_query_results *results = execute_sparql(world, model, sparql_query);
 
   // Print Results
-  // TODO
+  std::cout << "\nEphemeris:\n";
+  while (!librdf_query_results_finished(results)) {
+    librdf_node *x = librdf_query_results_get_binding_value(results, 0);
+    librdf_node *y = librdf_query_results_get_binding_value(results, 1);
+    librdf_node *z = librdf_query_results_get_binding_value(results, 2);
+    librdf_node *t = librdf_query_results_get_binding_value(results, 3);
+
+    std::cout << "  x: " << (x ? (const char *)librdf_node_get_literal_value(x) : "(null)") << " ";
+    std::cout << "  y: " << (y ? (const char *)librdf_node_get_literal_value(y) : "(null)") << " ";
+    std::cout << "  z: " << (z ? (const char *)librdf_node_get_literal_value(z) : "(null)") << " ";
+    std::cout << "  t: " << (t ? (const char *)librdf_node_get_literal_value(t) : "(null)") << std::endl;
+
+    librdf_query_results_next(results);
+  }
 
   librdf_free_query_results(results);
+}
+
+void cleanup(librdf_world *world, librdf_storage *storage, librdf_model *model, librdf_parser *parser) {
+  librdf_free_parser(parser);
+  librdf_free_model(model);
+  librdf_free_storage(storage);
+  librdf_free_world(world);
 }
 
 int main() {
@@ -111,7 +130,6 @@ int main() {
   init(&world, &storage, &model, &parser);
 
   // Load RDF File
-  // const char *filename = "small.ttl";
   const char *filename = "sample_rdf_glas.ttl";
   parse_file(world, parser, model, filename);
 
@@ -122,10 +140,6 @@ int main() {
   example_query2(world, model);
 
   // Cleanup
-  librdf_free_parser(parser);
-  librdf_free_model(model);
-  librdf_free_storage(storage);
-  librdf_free_world(world);
-
+  cleanup(world, storage, model, parser);
   return 0;
 }
