@@ -44,8 +44,6 @@ librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, c
   return results;
 }
 
-#include <string>
-
 std::string create_ephemeris_query(std::string image_id) {
   // clang-format off
     std::string ephemeris_query = 
