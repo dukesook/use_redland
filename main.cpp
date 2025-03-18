@@ -44,6 +44,29 @@ librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, c
   return results;
 }
 
+#include <string>
+
+std::string create_ephemeris_query(std::string image_id) {
+  // clang-format off
+    std::string ephemeris_query = 
+        "PREFIX obi: <http://purl.obolibrary.org/obo/OBI_> "
+        "PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> "
+        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
+        "PREFIX imh: <http://ontology.mil/foundry/IMH_> "
+        "SELECT ?x ?y ?z ?t WHERE { "
+        "  ?ephemeris cco:is_about <" + image_id + ">. "
+        "  ?ephemeris rdf:type imh:0001646. "
+        "  ?ephemeris imh:0001670 ?coordinate. "
+        "  ?coordinate imh:0001430 ?x. "
+        "  ?coordinate imh:0001474 ?y. "
+        "  ?coordinate imh:0001447 ?z. "
+        "  ?coordinate imh:0001161 ?tinst. "
+        "  ?tinst obi:0002135 ?t. "
+        "}";
+      return ephemeris_query;
+  // clang-format on
+}
+
 void example_query1(librdf_world *world, librdf_model *model) {
 
   // Create Query
@@ -72,26 +95,11 @@ void example_query1(librdf_world *world, librdf_model *model) {
 
 void example_query2(librdf_world *world, librdf_model *model) {
   // Create Query
-  const char *sparql_query = R"(
-    PREFIX obi: <http://purl.obolibrary.org/obo/OBI_>
-    PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX imh: <http://ontology.mil/foundry/IMH_>
-    
-    SELECT ?x ?y ?z ?t WHERE {
-      ?ephemeris cco:is_about <http://fresh.com/19>.
-      ?ephemeris rdf:type imh:0001646.
-      ?ephemeris imh:0001670 ?coordinate.
-      ?coordinate imh:0001430 ?x.
-      ?coordinate imh:0001474 ?y.
-      ?coordinate imh:0001447 ?z.
-      ?coordinate imh:0001161 ?tinst.
-      ?tinst obi:0002135 ?t.
-    }
-    )";
+  const char *image_id = "http://fresh.com/19"; // unique identifier to specify a particular image
+  std::string sparql_query = create_ephemeris_query(image_id);
 
   // Execute Query
-  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+  librdf_query_results *results = execute_sparql(world, model, sparql_query.c_str());
 
   // Print Results
   std::cout << "\nEphemeris:\n";
