@@ -60,6 +60,39 @@ void print_results(librdf_query_results *results) {
   }
 }
 
+void example_query1(librdf_world *world, librdf_model *model) {
+
+  const char *sparql_query = "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10";
+  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+
+  // Print Results
+  print_results(results);
+  librdf_free_query_results(results);
+}
+
+void example_query2(librdf_world *world, librdf_model *model) {
+  const char *sparql_query2 = R"(
+    PREFIX obi: <http://purl.obolibrary.org/obo/OBI_>
+    PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX imh: <http://ontology.mil/foundry/IMH_>
+    
+    SELECT ?x ?y ?z ?t WHERE {
+      ?ephemeris cco:is_about <http://fresh.com/19>.
+      ?ephemeris rdf:type imh:0001646.
+      ?ephemeris imh:0001670 ?coordinate.
+      ?coordinate imh:0001430 ?x.
+      ?coordinate imh:0001474 ?y.
+      ?coordinate imh:0001447 ?z.
+      ?coordinate imh:0001161 ?tinst.
+      ?tinst obi:0002135 ?t.
+    }
+    )";
+  librdf_query_results *results2 = execute_sparql(world, model, sparql_query2);
+  print_results(results2);
+  librdf_free_query_results(results2);
+}
+
 int main() {
   // Initialize the Redland world
   librdf_world *world;
@@ -75,15 +108,13 @@ int main() {
   const char *filename = "sample_rdf_glas.ttl";
   parse_file(world, parser, model, filename);
 
-  // Execute SPARQL
-  const char *sparql_query = "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10";
-  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+  // Execute SPARQL #1
+  example_query1(world, model);
 
-  // Print Results
-  print_results(results);
+  // Execute SPARQL #2
+  example_query2(world, model);
 
   // Cleanup
-  librdf_free_query_results(results);
   librdf_free_parser(parser);
   librdf_free_model(model);
   librdf_free_storage(storage);
