@@ -126,7 +126,6 @@ void cleanup(librdf_world *world, librdf_storage *storage, librdf_model *model, 
 }
 
 int main() {
-  // Initialize the Redland world
   librdf_world *world;
   librdf_storage *storage;
   librdf_model *model;
