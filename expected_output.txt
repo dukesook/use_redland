@@ -1,0 +1,43 @@
+Redland initialized successfully.
+Parsing file...
+Successfully loaded RDF file: sample_rdf_glas.ttl
+Query executed successfully.
+
+Triples:
+<http://fresh.com/10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual>
+<http://fresh.com/10301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ontology.mil/foundry/IMH_0002056>
+<http://fresh.com/10301> <http://www.w3.org/2000/01/rdf-schema#label> "use :lagrangian-interpolation for <http://fresh.com/20>"
+<http://fresh.com/10301> <http://ontology.mil/foundry/IMH_0002058> "5"^^<http://www.w3.org/2001/XMLSchema#integer>
+<http://fresh.com/10301> <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> <http://fresh.com/20>
+<http://fresh.com/10351> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ontology.mil/foundry/IMH_0002056>
+<http://fresh.com/10351> <http://www.w3.org/2000/01/rdf-schema#label> "use :lagrangian-interpolation for <http://fresh.com/10302>"
+<http://fresh.com/10351> <http://ontology.mil/foundry/IMH_0002058> "3"^^<http://www.w3.org/2001/XMLSchema#integer>
+<http://fresh.com/10351> <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> <http://fresh.com/10302>
+<http://fresh.com/10352> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ontology.mil/foundry/IMH_0001441>
+Query executed successfully.
+
+Ephemeris:
+  x: 4148444.25   y: 4182009.84   z: 3923573.87   t: 1491595605000000000
+  x: 4152554.53   y: 4183714.33   z: 3917422.66   t: 1491595606000000000
+  x: 4156660.33   y: 4185413.51   z: 3911266.95   t: 1491595607000000000
+  x: 4160761.72   y: 4187107.49   z: 3905106.93   t: 1491595608000000000
+  x: 4164858.71   y: 4188796.18   z: 3898942.43   t: 1491595609000000000
+  x: 4168951.29   y: 4190479.57   z: 3892773.61   t: 1491595610000000000
+  x: 4173039.48   y: 4192157.66   z: 3886600.4   t: 1491595611000000000
+  x: 4177123.27   y: 4193830.44   z: 3880422.78   t: 1491595612000000000
+  x: 4181202.57   y: 4195498.02   z: 3874240.87   t: 1491595613000000000
+  x: 4185277.46   y: 4197160.32   z: 3868054.46   t: 1491595614000000000
+  x: 4189347.95   y: 4198817.21   z: 3861863.83   t: 1491595615000000000
+  x: 4193413.95   y: 4200468.89   z: 3855668.73   t: 1491595616000000000
+  x: 4197475.54   y: 4202115.28   z: 3849469.3   t: 1491595617000000000
+  x: 4201532.64   y: 4203756.37   z: 3843265.58   t: 1491595618000000000
+  x: 4205585.33   y: 4205392.15   z: 3837057.56   t: 1491595619000000000
+  x: 4209633.53   y: 4207022.73   z: 3830845.14   t: 1491595620000000000
+  x: 4213677.22   y: 4208647.93   z: 3824628.51   t: 1491595621000000000
+  x: 4217716.52   y: 4210267.81   z: 3818407.5   t: 1491595622000000000
+  x: 4221751.22   y: 4211882.5   z: 3812182.18   t: 1491595623000000000
+  x: 4225781.51   y: 4213491.8   z: 3805952.55   t: 1491595624000000000
+  x: 4229807.31   y: 4215095.78   z: 3799718.72   t: 1491595625000000000
+  x: 4233828.61   y: 4216694.56   z: 3793480.51   t: 1491595626000000000
+  x: 4237845.41   y: 4218287.96   z: 3787238.07   t: 1491595627000000000
+  x: 4241857.72   y: 4219876.04   z: 3780991.35   t: 1491595628000000000
