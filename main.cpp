@@ -44,7 +44,15 @@ librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, c
   return results;
 }
 
-void print_results(librdf_query_results *results) {
+void example_query1(librdf_world *world, librdf_model *model) {
+
+  // Create Query
+  const char *sparql_query = "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10";
+
+  // Execute Query
+  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+
+  // Print Results
   std::cout << "Results:\n";
   while (!librdf_query_results_finished(results)) {
     librdf_node *s = librdf_query_results_get_binding_value(results, 0);
@@ -58,20 +66,14 @@ void print_results(librdf_query_results *results) {
 
     librdf_query_results_next(results);
   }
-}
 
-void example_query1(librdf_world *world, librdf_model *model) {
-
-  const char *sparql_query = "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10";
-  librdf_query_results *results = execute_sparql(world, model, sparql_query);
-
-  // Print Results
-  print_results(results);
+  // Cleanup
   librdf_free_query_results(results);
 }
 
 void example_query2(librdf_world *world, librdf_model *model) {
-  const char *sparql_query2 = R"(
+  // Create Query
+  const char *sparql_query = R"(
     PREFIX obi: <http://purl.obolibrary.org/obo/OBI_>
     PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -88,9 +90,14 @@ void example_query2(librdf_world *world, librdf_model *model) {
       ?tinst obi:0002135 ?t.
     }
     )";
-  librdf_query_results *results2 = execute_sparql(world, model, sparql_query2);
-  print_results(results2);
-  librdf_free_query_results(results2);
+
+  // Execute Query
+  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+
+  // Print Results
+  // TODO
+
+  librdf_free_query_results(results);
 }
 
 int main() {
