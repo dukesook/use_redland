@@ -138,7 +138,7 @@ int main() {
   init(&world, &storage, &graph, &parser);
 
   // Load RDF File
-  const char *filename = "snip_rip_small.ttl";
+  const char *filename = "../snip_rip_small.ttl";
   parse_file(world, parser, graph, filename);
 
   // Execute SPARQL #1

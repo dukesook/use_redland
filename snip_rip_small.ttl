@@ -1,0 +1,1484 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix fresh: <http://fresh.com/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix imh: <http://ontology.mil/foundry/IMH_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qunit: <http://qudt.org/vocab/unit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix simple-feature: <http://www.opengis.net/ont/sf#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+fresh:115 a imh:0002056 ;
+    rdfs:label "use :lagrangian-interpolation for <http://fresh.com/66>" ;
+    imh:0002058 "3"^^xsd:integer ;
+    cco:ont00001808 fresh:66 .
+
+fresh:116 a imh:0001441 ;
+    rdfs:label "boresight correction for <http://fresh.com/23>" ;
+    imh:0001159 qunit:RAD ;
+    imh:0002063 fresh:7 ;
+    obi:0002135 "[\"+0.0000000\", \"+0.0000000\", \"+0.0000000\"]"^^imh:0001935 ;
+    cco:ont00001808 fresh:23 ;
+    cco:ont00001966 fresh:6 .
+
+fresh:117 a imh:0002084 ;
+    rdfs:label "primary mirror vertex point offset for <http://fresh.com/23>" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:1 ;
+    imh:0001430 "+00.000000"^^xsd:double ;
+    imh:0001447 "+00.000000"^^xsd:double ;
+    imh:0001474 "+00.000000"^^xsd:double ;
+    imh:0002063 fresh:7 ;
+    cco:ont00001808 fresh:23 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:9 .
+
+fresh:118 a imh:0002079 ;
+    rdfs:label "chips for <http://fresh.com/23>" ;
+    imh:0001159 qunit:M ;
+    obi:0002135 "[[0.0, 256.0], [-0.00765, 0.0], [0.00765, 0.0]]"^^imh:0001935 ;
+    cco:ont00001808 fresh:23 ;
+    cco:ont00001912 fresh:7 ;
+    cco:ont00001982 fresh:16 .
+
+fresh:122 a imh:0002059 ;
+    rdfs:label "use :linear-interpolation for <http://fresh.com/119>" ;
+    cco:ont00001808 fresh:119 .
+
+fresh:125 a imh:0002083 ;
+    imh:0001159 qunit:MicroM ;
+    obi:0002135 "0.70664"^^xsd:double ;
+    cco:ont00001808 fresh:23 .
+
+fresh:126 a imh:0002073 ;
+    imh:0001161 fresh:127 ;
+    bfo:0000132 fresh:123 .
+
+fresh:128 a imh:0001936 ;
+    rdfs:label "image_duration of <http://fresh.com/23>" ;
+    imh:0001159 qunit:NanoSEC ;
+    obi:0002135 "15000000000"^^xsd:integer ;
+    cco:ont00001966 fresh:123 .
+
+fresh:129 a imh:0002060,
+        imh:0002084 ;
+    rdfs:label "Ground reference point for <http://fresh.com/23>" ;
+    imh:0001159 qunit:M ;
+    imh:0001430 "+03819809.03"^^xsd:double ;
+    imh:0001447 "+03475785.73"^^xsd:double ;
+    imh:0001474 "+03731961.77"^^xsd:double ;
+    cco:ont00001808 fresh:23 ;
+    cco:ont00001912 imh:0010581 .
+
+fresh:130 a imh:0002061 ;
+    rdfs:label "atmosphere refraction correction should be applied to <http://fresh.com/23>" ;
+    cco:ont00001808 fresh:23 .
+
+fresh:131 a imh:0002054 ;
+    rdfs:label "velocity abbreation correction should be applied to <http://fresh.com/23>" ;
+    cco:ont00001808 fresh:23 .
+
+fresh:132 a imh:0002090 ;
+    rdfs:label "An SPDCF parameterized by :param-delta-t" ;
+    imh:0001670 fresh:133 ;
+    obi:0002135 "[[0.5, [\"damped cosine\", [1.0, 600.0, 150.0]]], [0.5, [\"CSM 4 parameter\", [1.0, 0.0, 0.0, 100.0]]]]"^^imh:0001935 .
+
+fresh:18 a imh:0000020,
+        ":entity_type" ;
+    rdfs:label "the sensor function" ;
+    imh:0001068 fresh:4 ;
+    bfo:0000054 fresh:123 .
+
+fresh:20 a cco:ont00000601,
+        ":entity_type" ;
+    rdfs:label "the imaging function" ;
+    imh:0001068 fresh:16 ;
+    bfo:0000054 fresh:123 .
+
+fresh:21 a imh:0002433,
+        ":entity_type" ;
+    bfo:0000176 fresh:16 .
+
+fresh:22 a imh:0002236,
+        ":entity_type" ;
+    bfo:0000176 fresh:19 .
+
+fresh:65 a imh:0002056 ;
+    rdfs:label "use :lagrangian-interpolation for <http://fresh.com/24>" ;
+    imh:0002058 "5"^^xsd:integer ;
+    cco:ont00001808 fresh:24 .
+
+fresh:8 a owl:NamedIndividual .
+
+imh:0000046 a owl:Class .
+
+imh:0000063 a owl:Class .
+
+imh:0000077 a owl:Class .
+
+imh:0001068 a owl:ObjectProperty .
+
+imh:0001071 a owl:ObjectProperty .
+
+imh:0001096 a owl:ObjectProperty .
+
+imh:0001104 a owl:Class .
+
+imh:0001107 a owl:ObjectProperty .
+
+imh:0001137 a owl:ObjectProperty .
+
+imh:0001153 a owl:Class .
+
+imh:0001159 a owl:ObjectProperty .
+
+imh:0001161 a owl:ObjectProperty .
+
+imh:0001348 a owl:ObjectProperty .
+
+imh:0001352 a owl:NamedIndividual .
+
+imh:0001388 a owl:DatatypeProperty .
+
+imh:0001391 a owl:DatatypeProperty .
+
+imh:0001394 a owl:DatatypeProperty .
+
+imh:0001400 a owl:Class .
+
+imh:0001417 a owl:ObjectProperty .
+
+imh:0001418 a owl:ObjectProperty .
+
+imh:0001430 a owl:DatatypeProperty .
+
+imh:0001447 a owl:DatatypeProperty .
+
+imh:0001474 a owl:DatatypeProperty .
+
+imh:0001476 a owl:ObjectProperty .
+
+imh:0001508 a owl:Class .
+
+imh:0001532 a owl:DatatypeProperty .
+
+imh:0001626 a owl:DatatypeProperty .
+
+imh:0001630 a owl:DatatypeProperty .
+
+imh:0001634 a owl:Class .
+
+imh:0001637 a owl:Class .
+
+imh:0001642 a owl:ObjectProperty .
+
+imh:0001644 a owl:Class .
+
+imh:0001657 a owl:Class .
+
+imh:0001658 a owl:Class .
+
+imh:0001667 a owl:ObjectProperty .
+
+imh:0001670 a owl:ObjectProperty .
+
+imh:0001675 a owl:Class .
+
+imh:0001678 a owl:ObjectProperty .
+
+imh:0001758 a owl:AnnotationProperty .
+
+imh:0001765 a owl:Class .
+
+imh:0001779 a owl:Class .
+
+imh:0001787 a owl:DatatypeProperty .
+
+imh:0001802 a owl:ObjectProperty .
+
+imh:0001808 a owl:DatatypeProperty .
+
+imh:0001817 a owl:Class .
+
+imh:0001848 a owl:Class .
+
+imh:0001862 a owl:Class .
+
+imh:0001865 a owl:Class .
+
+imh:0001899 a owl:Class .
+
+imh:0001915 a owl:Class .
+
+imh:0001935 a rdfs:Datatype .
+
+imh:0001940 a owl:Class .
+
+imh:0001948 a owl:Class .
+
+imh:0001955 a owl:Class .
+
+imh:0001964 a owl:Class .
+
+imh:0001972 a owl:Class .
+
+imh:0001982 a owl:Class .
+
+imh:0001984 a owl:Class .
+
+imh:0001990 a owl:Class .
+
+imh:0001994 a owl:Class .
+
+imh:0001999 a owl:Class .
+
+imh:0002004 a owl:Class .
+
+imh:0002005 a owl:Class .
+
+imh:0002019 a owl:Class .
+
+imh:0002035 a owl:Class .
+
+imh:0002046 a owl:NamedIndividual .
+
+imh:0002053 a owl:NamedIndividual .
+
+imh:0002055 a owl:Class .
+
+imh:0002058 a owl:DatatypeProperty .
+
+imh:0002063 a owl:ObjectProperty .
+
+imh:0002064 a owl:Class .
+
+imh:0002068 a owl:Class .
+
+imh:0002070 a owl:Class .
+
+imh:0002072 a owl:Class .
+
+imh:0002078 a owl:NamedIndividual .
+
+imh:0002081 a owl:Class .
+
+imh:0002088 a owl:Class .
+
+imh:0002093 a owl:NamedIndividual .
+
+imh:0002094 a owl:NamedIndividual .
+
+imh:0002095 a owl:NamedIndividual .
+
+imh:0002096 a owl:NamedIndividual .
+
+imh:0002097 a owl:NamedIndividual .
+
+imh:0002098 a owl:NamedIndividual .
+
+imh:0002099 a owl:NamedIndividual .
+
+imh:0002103 a owl:NamedIndividual .
+
+imh:0002104 a owl:NamedIndividual .
+
+imh:0002107 a owl:NamedIndividual .
+
+imh:0002108 a owl:NamedIndividual .
+
+imh:0002110 a owl:DatatypeProperty .
+
+imh:0002111 a owl:Class .
+
+imh:0002114 a owl:Class .
+
+imh:0002117 a owl:Class .
+
+imh:0002119 a owl:Class .
+
+imh:0002120 a owl:Class .
+
+imh:0002121 a owl:Class .
+
+imh:0002125 a owl:Class .
+
+imh:0002126 a owl:Class .
+
+imh:0002128 a owl:NamedIndividual .
+
+imh:0002129 a owl:NamedIndividual .
+
+imh:0002131 a owl:NamedIndividual .
+
+imh:0002134 a owl:NamedIndividual .
+
+imh:0002135 a owl:NamedIndividual .
+
+imh:0002136 a owl:NamedIndividual .
+
+imh:0002138 a owl:NamedIndividual .
+
+imh:0002139 a owl:NamedIndividual .
+
+imh:0002141 a owl:NamedIndividual .
+
+imh:0002144 a owl:NamedIndividual .
+
+imh:0002145 a owl:Class .
+
+imh:0002152 a owl:ObjectProperty .
+
+imh:0002155 a owl:Class .
+
+imh:0002157 a owl:ObjectProperty .
+
+imh:0002159 a owl:Class .
+
+imh:0002163 a owl:Class .
+
+imh:0002164 a owl:Class .
+
+imh:0002165 a owl:NamedIndividual .
+
+imh:0002166 a owl:Class .
+
+imh:0002167 a owl:NamedIndividual .
+
+imh:0002170 a owl:NamedIndividual .
+
+imh:0002171 a owl:Class .
+
+imh:0002176 a owl:NamedIndividual .
+
+imh:0002177 a owl:NamedIndividual .
+
+imh:0002178 a owl:Class .
+
+imh:0002179 a owl:Class .
+
+imh:0002181 a owl:Class .
+
+imh:0002182 a owl:Class .
+
+imh:0002183 a owl:Class .
+
+imh:0002185 a owl:Class .
+
+imh:0002193 a owl:Class .
+
+imh:0002202 a owl:Class .
+
+imh:0002210 a owl:Class .
+
+imh:0002213 a owl:Class .
+
+imh:0002215 a owl:Class .
+
+imh:0002216 a owl:Class .
+
+imh:0002218 a owl:Class .
+
+imh:0002219 a owl:Class .
+
+imh:0002220 a owl:Class .
+
+imh:0002223 a owl:Class .
+
+imh:0002232 a owl:Class .
+
+imh:0002237 a owl:Class .
+
+imh:0002243 a owl:Class .
+
+imh:0002244 a owl:Class .
+
+imh:0002249 a owl:Class .
+
+imh:0002251 a owl:Class .
+
+imh:0002258 a owl:ObjectProperty .
+
+imh:0002262 a owl:NamedIndividual .
+
+imh:0002301 a owl:NamedIndividual .
+
+imh:0002313 a owl:Class .
+
+imh:0002329 a owl:Class .
+
+imh:0002330 a owl:Class .
+
+imh:0002331 a owl:Class .
+
+imh:0002332 a owl:Class .
+
+imh:0002333 a owl:Class .
+
+imh:0002334 a owl:Class .
+
+imh:0002335 a owl:Class .
+
+imh:0002339 a owl:Class .
+
+imh:0002343 a owl:Class .
+
+imh:0002379 a owl:Class .
+
+imh:0002381 a owl:Class .
+
+imh:0002400 a owl:Class .
+
+imh:0002402 a owl:Class .
+
+imh:0002407 a owl:Class .
+
+imh:0002408 a owl:NamedIndividual .
+
+imh:0002420 a owl:Class .
+
+imh:0002424 a owl:ObjectProperty .
+
+imh:0002427 a owl:Class .
+
+imh:0002428 a owl:Class .
+
+imh:0002437 a owl:Class .
+
+imh:0002440 a owl:Class .
+
+imh:0002457 a owl:Class .
+
+imh:0002458 a owl:Class .
+
+imh:0002459 a owl:Class .
+
+imh:0002462 a owl:Class .
+
+imh:0002466 a owl:Class .
+
+imh:0002467 a owl:Class .
+
+imh:0002468 a owl:Class .
+
+imh:0002477 a owl:Class .
+
+imh:0002478 a owl:Class .
+
+imh:0002484 a owl:Class .
+
+imh:0002486 a owl:Class .
+
+imh:0002487 a owl:Class .
+
+imh:0002488 a owl:Class .
+
+imh:0002491 a owl:Class .
+
+imh:0002493 a owl:ObjectProperty .
+
+imh:0002495 a owl:Class .
+
+imh:0002496 a owl:Class .
+
+imh:0002497 a owl:Class .
+
+imh:0002500 a owl:Class .
+
+imh:0002501 a owl:Class .
+
+imh:0002502 a owl:Class .
+
+imh:0002503 a owl:Class .
+
+imh:0002504 a owl:Class .
+
+imh:0002505 a owl:Class .
+
+imh:0002507 a owl:Class .
+
+imh:0002508 a owl:Class .
+
+imh:0002509 a owl:Class .
+
+imh:0023280 a owl:Class .
+
+bfo:0000015 a owl:Class .
+
+bfo:0000023 a owl:Class .
+
+bfo:0000054 a owl:ObjectProperty .
+
+bfo:0000057 a owl:ObjectProperty .
+
+bfo:0000129 a owl:ObjectProperty .
+
+bfo:0000132 a owl:ObjectProperty .
+
+bfo:0000171 a owl:ObjectProperty .
+
+bfo:0000176 a owl:ObjectProperty .
+
+obi:0000999 a owl:ObjectProperty .
+
+obi:0001931 a owl:Class .
+
+obi:0002135 a owl:DatatypeProperty .
+
+qunit:AU a owl:NamedIndividual .
+
+qunit:J-PER-M2-SEC0pt5-K a owl:NamedIndividual .
+
+qunit:MilliW-PER-CentiM2-MicroM-SR a owl:NamedIndividual .
+
+qunit:PER-CentiM a owl:NamedIndividual .
+
+qunit:PERCENT a owl:NamedIndividual .
+
+qunit:W-PER-M2 a owl:NamedIndividual .
+
+qunit:W-PER-M2-MicroM a owl:NamedIndividual .
+
+qunit:W-PER-M2-MicroM-SR a owl:NamedIndividual .
+
+qunit:W-PER-M2-SR a owl:NamedIndividual .
+
+qunit:W-PER-M3 a owl:NamedIndividual .
+
+geosparql:Feature a owl:Class .
+
+geosparql:asWKT a owl:DatatypeProperty .
+
+geosparql:hasGeometry a owl:ObjectProperty .
+
+geosparql:sfWithin a owl:DatatypeProperty .
+
+geosparql:wktLiteral a rdfs:Datatype .
+
+simple-feature:Polygon a owl:Class .
+
+rdfs:label a owl:AnnotationProperty .
+
+cco:ont00000236 a owl:Class .
+
+cco:ont00000799 a owl:Class .
+
+cco:ont00001043 a owl:Class .
+
+cco:ont00001630 a owl:NamedIndividual .
+
+cco:ont00001764 a owl:DatatypeProperty .
+
+cco:ont00001766 a owl:DatatypeProperty .
+
+cco:ont00001808 a owl:ObjectProperty .
+
+cco:ont00001884 a owl:ObjectProperty .
+
+cco:ont00001912 a owl:ObjectProperty .
+
+cco:ont00001916 a owl:ObjectProperty .
+
+cco:ont00001942 a owl:ObjectProperty .
+
+cco:ont00001966 a owl:ObjectProperty .
+
+cco:ont00001982 a owl:ObjectProperty .
+
+cco:ont00001986 a owl:ObjectProperty .
+
+fresh:10 a imh:0002102,
+        owl:NamedIndividual ;
+    rdfs:label "platforms with id \"the_platform_id\"" ;
+    imh:0001532 "the_platform_id" .
+
+fresh:100 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595621000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:99 ;
+    imh:0001430 "4213677.22"^^xsd:double ;
+    imh:0001447 "3824628.51"^^xsd:double ;
+    imh:0001474 "4208647.93"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:101 a imh:0001416 ;
+    rdfs:label "ephemeris (4217716.52, 4210267.81, 3818407.5) at 1491595622000000000" ;
+    obi:0002135 "1491595622000000000"^^xsd:long .
+
+fresh:102 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595622000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:101 ;
+    imh:0001430 "4217716.52"^^xsd:double ;
+    imh:0001447 "3818407.5"^^xsd:double ;
+    imh:0001474 "4210267.81"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:103 a imh:0001416 ;
+    rdfs:label "ephemeris (4221751.22, 4211882.5, 3812182.18) at 1491595623000000000" ;
+    obi:0002135 "1491595623000000000"^^xsd:long .
+
+fresh:104 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595623000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:103 ;
+    imh:0001430 "4221751.22"^^xsd:double ;
+    imh:0001447 "3812182.18"^^xsd:double ;
+    imh:0001474 "4211882.5"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:105 a imh:0001416 ;
+    rdfs:label "ephemeris (4225781.51, 4213491.8, 3805952.55) at 1491595624000000000" ;
+    obi:0002135 "1491595624000000000"^^xsd:long .
+
+fresh:106 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595624000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:105 ;
+    imh:0001430 "4225781.51"^^xsd:double ;
+    imh:0001447 "3805952.55"^^xsd:double ;
+    imh:0001474 "4213491.8"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:107 a imh:0001416 ;
+    rdfs:label "ephemeris (4229807.31, 4215095.78, 3799718.72) at 1491595625000000000" ;
+    obi:0002135 "1491595625000000000"^^xsd:long .
+
+fresh:108 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595625000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:107 ;
+    imh:0001430 "4229807.31"^^xsd:double ;
+    imh:0001447 "3799718.72"^^xsd:double ;
+    imh:0001474 "4215095.78"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:109 a imh:0001416 ;
+    rdfs:label "ephemeris (4233828.61, 4216694.56, 3793480.51) at 1491595626000000000" ;
+    obi:0002135 "1491595626000000000"^^xsd:long .
+
+fresh:11 a imh:0002100,
+        owl:NamedIndividual ;
+    rdfs:label "payloads with id \"the_play_id\"" ;
+    imh:0001532 "the_play_id" .
+
+fresh:110 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595626000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:109 ;
+    imh:0001430 "4233828.61"^^xsd:double ;
+    imh:0001447 "3793480.51"^^xsd:double ;
+    imh:0001474 "4216694.56"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:111 a imh:0001416 ;
+    rdfs:label "ephemeris (4237845.41, 4218287.96, 3787238.07) at 1491595627000000000" ;
+    obi:0002135 "1491595627000000000"^^xsd:long .
+
+fresh:112 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595627000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:111 ;
+    imh:0001430 "4237845.41"^^xsd:double ;
+    imh:0001447 "3787238.07"^^xsd:double ;
+    imh:0001474 "4218287.96"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:113 a imh:0001416 ;
+    rdfs:label "ephemeris (4241857.72, 4219876.04, 3780991.35) at 1491595628000000000" ;
+    obi:0002135 "1491595628000000000"^^xsd:long .
+
+fresh:114 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595628000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:113 ;
+    imh:0001430 "4241857.72"^^xsd:double ;
+    imh:0001447 "3780991.35"^^xsd:double ;
+    imh:0001474 "4219876.04"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:119 a imh:0002080 ;
+    rdfs:label "focal length time series for <http://fresh.com/23>" ;
+    imh:0001670 fresh:120 ;
+    cco:ont00001808 fresh:23 .
+
+fresh:12 a imh:0002071,
+        owl:NamedIndividual ;
+    rdfs:label "sensors with id \"the_sensor_id\"" ;
+    imh:0001532 "the_sensor_id" .
+
+fresh:120 a imh:0001871 ;
+    rdfs:label "focal_length for <http://fresh.com/23> at 1491549849000000000: 01.42311275" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:121 ;
+    obi:0002135 "01.42311275"^^xsd:double .
+
+fresh:121 a imh:0001416 ;
+    obi:0002135 "1491549849000000000"^^xsd:long .
+
+fresh:133 a imh:0002124 ;
+    rdfs:label "adjustable parameter :param-delta-t in unit :nanosecond in crs :tai-reference-system" ;
+    imh:0001159 qunit:NanoSEC ;
+    obi:0000999 imh:0002175 ;
+    cco:ont00001912 cco:ont00001590 .
+
+fresh:19 a imh:0002433,
+        ":entity_type" ;
+    bfo:0000171 fresh:17 .
+
+fresh:24 a imh:0002045 ;
+    rdfs:label "attitude for <http://fresh.com/23>" ;
+    imh:0001670 fresh:26,
+        fresh:28,
+        fresh:30,
+        fresh:32,
+        fresh:34,
+        fresh:36,
+        fresh:38,
+        fresh:40,
+        fresh:42,
+        fresh:44,
+        fresh:46,
+        fresh:48,
+        fresh:50,
+        fresh:52,
+        fresh:54,
+        fresh:56,
+        fresh:58,
+        fresh:60,
+        fresh:62,
+        fresh:64 ;
+    cco:ont00001808 fresh:23 .
+
+fresh:25 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397187236862046, 0.782878092984268, -0.469240045412516, 0.095697284078654]" ;
+    obi:0002135 "1491595605000000000"^^xsd:long .
+
+fresh:26 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605000000000" ;
+    imh:0001161 fresh:25 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397187236862046, 0.782878092984268, -0.469240045412516, 0.095697284078654]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:27 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397186930267099, 0.78287698065883, -0.469241940350818, 0.095698364640541]" ;
+    obi:0002135 "1491595605004475000"^^xsd:long .
+
+fresh:28 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605004475000" ;
+    imh:0001161 fresh:27 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397186930267099, 0.78287698065883, -0.469241940350818, 0.095698364640541]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:29 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397186623669733, 0.782875868328625, -0.46924383528626, 0.095699445201844]" ;
+    obi:0002135 "1491595605008950000"^^xsd:long .
+
+fresh:30 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605008950000" ;
+    imh:0001161 fresh:29 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397186623669733, 0.782875868328625, -0.46924383528626, 0.095699445201844]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:31 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397186317069949, 0.782874755993652, -0.469245730218847, 0.095700525762565]" ;
+    obi:0002135 "1491595605013425000"^^xsd:long .
+
+fresh:32 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605013425000" ;
+    imh:0001161 fresh:31 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397186317069949, 0.782874755993652, -0.469245730218847, 0.095700525762565]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:33 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397186010467746, 0.782873643653913, -0.469247625148575, 0.095701606322703]" ;
+    obi:0002135 "1491595605017900000"^^xsd:long .
+
+fresh:34 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605017900000" ;
+    imh:0001161 fresh:33 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397186010467746, 0.782873643653913, -0.469247625148575, 0.095701606322703]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:35 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397185703863124, 0.782872531309405, -0.469249520075446, 0.095702686882259]" ;
+    obi:0002135 "1491595605022375000"^^xsd:long .
+
+fresh:36 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605022375000" ;
+    imh:0001161 fresh:35 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397185703863124, 0.782872531309405, -0.469249520075446, 0.095702686882259]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:37 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397185397256084, 0.782871418960131, -0.469251414999458, 0.095703767441231]" ;
+    obi:0002135 "1491595605026850000"^^xsd:long .
+
+fresh:38 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605026850000" ;
+    imh:0001161 fresh:37 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397185397256084, 0.782871418960131, -0.469251414999458, 0.095703767441231]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:39 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397185090646624, 0.782870306606089, -0.469253309920615, 0.095704847999621]" ;
+    obi:0002135 "1491595605031325000"^^xsd:long .
+
+fresh:40 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605031325000" ;
+    imh:0001161 fresh:39 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397185090646624, 0.782870306606089, -0.469253309920615, 0.095704847999621]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:41 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397184784034746, 0.782869194247278, -0.469255204838913, 0.095705928557429]" ;
+    obi:0002135 "1491595605035800000"^^xsd:long .
+
+fresh:42 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605035800000" ;
+    imh:0001161 fresh:41 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397184784034746, 0.782869194247278, -0.469255204838913, 0.095705928557429]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:43 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397184477420449, 0.782868081883702, -0.469257099754353, 0.095707009114652]" ;
+    obi:0002135 "1491595605040275000"^^xsd:long .
+
+fresh:44 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605040275000" ;
+    imh:0001161 fresh:43 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397184477420449, 0.782868081883702, -0.469257099754353, 0.095707009114652]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:45 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397184170803734, 0.782866969515357, -0.469258994666937, 0.095708089671294]" ;
+    obi:0002135 "1491595605044750000"^^xsd:long .
+
+fresh:46 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605044750000" ;
+    imh:0001161 fresh:45 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397184170803734, 0.782866969515357, -0.469258994666937, 0.095708089671294]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:47 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.3971838641846, 0.782865857142246, -0.469260889576661, 0.095709170227352]" ;
+    obi:0002135 "1491595605049225000"^^xsd:long .
+
+fresh:48 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605049225000" ;
+    imh:0001161 fresh:47 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.3971838641846, 0.782865857142246, -0.469260889576661, 0.095709170227352]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:49 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397183557563047, 0.782864744764366, -0.469262784483529, 0.095710250782828]" ;
+    obi:0002135 "1491595605053700000"^^xsd:long .
+
+fresh:50 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605053700000" ;
+    imh:0001161 fresh:49 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397183557563047, 0.782864744764366, -0.469262784483529, 0.095710250782828]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:51 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397183250939076, 0.78286363238172, -0.469264679387538, 0.09571133133772]" ;
+    obi:0002135 "1491595605058175000"^^xsd:long .
+
+fresh:52 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605058175000" ;
+    imh:0001161 fresh:51 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397183250939076, 0.78286363238172, -0.469264679387538, 0.09571133133772]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:53 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397182944312685, 0.782862519994306, -0.469266574288691, 0.095712411892031]" ;
+    obi:0002135 "1491595605062650000"^^xsd:long .
+
+fresh:54 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605062650000" ;
+    imh:0001161 fresh:53 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397182944312685, 0.782862519994306, -0.469266574288691, 0.095712411892031]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:55 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397182637683876, 0.782861407602124, -0.469268469186986, 0.095713492445758]" ;
+    obi:0002135 "1491595605067125000"^^xsd:long .
+
+fresh:56 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605067125000" ;
+    imh:0001161 fresh:55 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397182637683876, 0.782861407602124, -0.469268469186986, 0.095713492445758]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:57 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397182331052648, 0.782860295205176, -0.469270364082422, 0.095714572998902]" ;
+    obi:0002135 "1491595605071600000"^^xsd:long .
+
+fresh:58 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605071600000" ;
+    imh:0001161 fresh:57 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397182331052648, 0.782860295205176, -0.469270364082422, 0.095714572998902]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:59 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397182024419002, 0.782859182803459, -0.469272258975002, 0.095715653551464]" ;
+    obi:0002135 "1491595605076075000"^^xsd:long .
+
+fresh:6 a imh:0002123,
+        owl:NamedIndividual ;
+    rdfs:label "the boresight axis" ;
+    bfo:0000171 fresh:16 .
+
+fresh:60 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605076075000" ;
+    imh:0001161 fresh:59 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397182024419002, 0.782859182803459, -0.469272258975002, 0.095715653551464]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:61 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397181717782937, 0.782858070396976, -0.469274153864722, 0.095716734103442]" ;
+    obi:0002135 "1491595605080550000"^^xsd:long .
+
+fresh:62 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605080550000" ;
+    imh:0001161 fresh:61 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397181717782937, 0.782858070396976, -0.469274153864722, 0.095716734103442]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:63 a imh:0001416 ;
+    rdfs:label "time when attitude is [0.397181411144453, 0.782856957985725, -0.469276048751587, 0.095717814654838]" ;
+    obi:0002135 "1491595605085025000"^^xsd:long .
+
+fresh:64 a imh:0002075 ;
+    rdfs:label "attitude of <http://fresh.com/23> at 1491595605085025000" ;
+    imh:0001161 fresh:63 ;
+    imh:0002063 fresh:3 ;
+    obi:0002135 "[0.397181411144453, 0.782856957985725, -0.469276048751587, 0.095717814654838]"^^imh:0001935 ;
+    cco:ont00001912 imh:0010581,
+        cco:ont00001648 ;
+    cco:ont00001966 fresh:15 .
+
+fresh:66 a imh:0001646 ;
+    imh:0001670 fresh:100,
+        fresh:102,
+        fresh:104,
+        fresh:106,
+        fresh:108,
+        fresh:110,
+        fresh:112,
+        fresh:114,
+        fresh:68,
+        fresh:70,
+        fresh:72,
+        fresh:74,
+        fresh:76,
+        fresh:78,
+        fresh:80,
+        fresh:82,
+        fresh:84,
+        fresh:86,
+        fresh:88,
+        fresh:90,
+        fresh:92,
+        fresh:94,
+        fresh:96,
+        fresh:98 ;
+    cco:ont00001808 fresh:23 .
+
+fresh:67 a imh:0001416 ;
+    rdfs:label "ephemeris (4148444.25, 4182009.84, 3923573.87) at 1491595605000000000" ;
+    obi:0002135 "1491595605000000000"^^xsd:long .
+
+fresh:68 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595605000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:67 ;
+    imh:0001430 "4148444.25"^^xsd:double ;
+    imh:0001447 "3923573.87"^^xsd:double ;
+    imh:0001474 "4182009.84"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:69 a imh:0001416 ;
+    rdfs:label "ephemeris (4152554.53, 4183714.33, 3917422.66) at 1491595606000000000" ;
+    obi:0002135 "1491595606000000000"^^xsd:long .
+
+fresh:70 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595606000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:69 ;
+    imh:0001430 "4152554.53"^^xsd:double ;
+    imh:0001447 "3917422.66"^^xsd:double ;
+    imh:0001474 "4183714.33"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:71 a imh:0001416 ;
+    rdfs:label "ephemeris (4156660.33, 4185413.51, 3911266.95) at 1491595607000000000" ;
+    obi:0002135 "1491595607000000000"^^xsd:long .
+
+fresh:72 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595607000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:71 ;
+    imh:0001430 "4156660.33"^^xsd:double ;
+    imh:0001447 "3911266.95"^^xsd:double ;
+    imh:0001474 "4185413.51"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:73 a imh:0001416 ;
+    rdfs:label "ephemeris (4160761.72, 4187107.49, 3905106.93) at 1491595608000000000" ;
+    obi:0002135 "1491595608000000000"^^xsd:long .
+
+fresh:74 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595608000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:73 ;
+    imh:0001430 "4160761.72"^^xsd:double ;
+    imh:0001447 "3905106.93"^^xsd:double ;
+    imh:0001474 "4187107.49"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:75 a imh:0001416 ;
+    rdfs:label "ephemeris (4164858.71, 4188796.18, 3898942.43) at 1491595609000000000" ;
+    obi:0002135 "1491595609000000000"^^xsd:long .
+
+fresh:76 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595609000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:75 ;
+    imh:0001430 "4164858.71"^^xsd:double ;
+    imh:0001447 "3898942.43"^^xsd:double ;
+    imh:0001474 "4188796.18"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:77 a imh:0001416 ;
+    rdfs:label "ephemeris (4168951.29, 4190479.57, 3892773.61) at 1491595610000000000" ;
+    obi:0002135 "1491595610000000000"^^xsd:long .
+
+fresh:78 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595610000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:77 ;
+    imh:0001430 "4168951.29"^^xsd:double ;
+    imh:0001447 "3892773.61"^^xsd:double ;
+    imh:0001474 "4190479.57"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:79 a imh:0001416 ;
+    rdfs:label "ephemeris (4173039.48, 4192157.66, 3886600.4) at 1491595611000000000" ;
+    obi:0002135 "1491595611000000000"^^xsd:long .
+
+fresh:80 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595611000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:79 ;
+    imh:0001430 "4173039.48"^^xsd:double ;
+    imh:0001447 "3886600.4"^^xsd:double ;
+    imh:0001474 "4192157.66"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:81 a imh:0001416 ;
+    rdfs:label "ephemeris (4177123.27, 4193830.44, 3880422.78) at 1491595612000000000" ;
+    obi:0002135 "1491595612000000000"^^xsd:long .
+
+fresh:82 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595612000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:81 ;
+    imh:0001430 "4177123.27"^^xsd:double ;
+    imh:0001447 "3880422.78"^^xsd:double ;
+    imh:0001474 "4193830.44"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:83 a imh:0001416 ;
+    rdfs:label "ephemeris (4181202.57, 4195498.02, 3874240.87) at 1491595613000000000" ;
+    obi:0002135 "1491595613000000000"^^xsd:long .
+
+fresh:84 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595613000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:83 ;
+    imh:0001430 "4181202.57"^^xsd:double ;
+    imh:0001447 "3874240.87"^^xsd:double ;
+    imh:0001474 "4195498.02"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:85 a imh:0001416 ;
+    rdfs:label "ephemeris (4185277.46, 4197160.32, 3868054.46) at 1491595614000000000" ;
+    obi:0002135 "1491595614000000000"^^xsd:long .
+
+fresh:86 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595614000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:85 ;
+    imh:0001430 "4185277.46"^^xsd:double ;
+    imh:0001447 "3868054.46"^^xsd:double ;
+    imh:0001474 "4197160.32"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:87 a imh:0001416 ;
+    rdfs:label "ephemeris (4189347.95, 4198817.21, 3861863.83) at 1491595615000000000" ;
+    obi:0002135 "1491595615000000000"^^xsd:long .
+
+fresh:88 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595615000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:87 ;
+    imh:0001430 "4189347.95"^^xsd:double ;
+    imh:0001447 "3861863.83"^^xsd:double ;
+    imh:0001474 "4198817.21"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:89 a imh:0001416 ;
+    rdfs:label "ephemeris (4193413.95, 4200468.89, 3855668.73) at 1491595616000000000" ;
+    obi:0002135 "1491595616000000000"^^xsd:long .
+
+fresh:9 a imh:0002122,
+        owl:NamedIndividual ;
+    rdfs:label "the primary mirror vertex" ;
+    bfo:0000171 fresh:16 .
+
+fresh:90 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595616000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:89 ;
+    imh:0001430 "4193413.95"^^xsd:double ;
+    imh:0001447 "3855668.73"^^xsd:double ;
+    imh:0001474 "4200468.89"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:91 a imh:0001416 ;
+    rdfs:label "ephemeris (4197475.54, 4202115.28, 3849469.3) at 1491595617000000000" ;
+    obi:0002135 "1491595617000000000"^^xsd:long .
+
+fresh:92 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595617000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:91 ;
+    imh:0001430 "4197475.54"^^xsd:double ;
+    imh:0001447 "3849469.3"^^xsd:double ;
+    imh:0001474 "4202115.28"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:93 a imh:0001416 ;
+    rdfs:label "ephemeris (4201532.64, 4203756.37, 3843265.58) at 1491595618000000000" ;
+    obi:0002135 "1491595618000000000"^^xsd:long .
+
+fresh:94 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595618000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:93 ;
+    imh:0001430 "4201532.64"^^xsd:double ;
+    imh:0001447 "3843265.58"^^xsd:double ;
+    imh:0001474 "4203756.37"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:95 a imh:0001416 ;
+    rdfs:label "ephemeris (4205585.33, 4205392.15, 3837057.56) at 1491595619000000000" ;
+    obi:0002135 "1491595619000000000"^^xsd:long .
+
+fresh:96 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595619000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:95 ;
+    imh:0001430 "4205585.33"^^xsd:double ;
+    imh:0001447 "3837057.56"^^xsd:double ;
+    imh:0001474 "4205392.15"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:97 a imh:0001416 ;
+    rdfs:label "ephemeris (4209633.53, 4207022.73, 3830845.14) at 1491595620000000000" ;
+    obi:0002135 "1491595620000000000"^^xsd:long .
+
+fresh:98 a imh:0002084 ;
+    rdfs:label "ephemeris of platform of <http://fresh.com/23> at 1491595620000000000" ;
+    imh:0001159 qunit:M ;
+    imh:0001161 fresh:97 ;
+    imh:0001430 "4209633.53"^^xsd:double ;
+    imh:0001447 "3830845.14"^^xsd:double ;
+    imh:0001474 "4207022.73"^^xsd:double ;
+    imh:0002063 fresh:1 ;
+    cco:ont00001912 imh:0010581 ;
+    cco:ont00001966 fresh:14 .
+
+fresh:99 a imh:0001416 ;
+    rdfs:label "ephemeris (4213677.22, 4208647.93, 3824628.51) at 1491595621000000000" ;
+    obi:0002135 "1491595621000000000"^^xsd:long .
+
+imh:0000020 a owl:Class .
+
+imh:0000078 a owl:Class .
+
+imh:0001112 a owl:Class .
+
+imh:0001441 a owl:Class .
+
+imh:0001459 a owl:Class .
+
+imh:0001646 a owl:Class .
+
+imh:0001650 a owl:Class .
+
+imh:0001871 a owl:Class .
+
+imh:0001936 a owl:Class .
+
+imh:0001986 a owl:Class .
+
+imh:0002037 a owl:Class .
+
+imh:0002043 a owl:Class .
+
+imh:0002045 a owl:Class .
+
+imh:0002054 a owl:Class .
+
+imh:0002059 a owl:Class .
+
+imh:0002060 a owl:Class .
+
+imh:0002061 a owl:Class .
+
+imh:0002065 a owl:Class .
+
+imh:0002071 a owl:Class .
+
+imh:0002073 a owl:Class .
+
+imh:0002077 a owl:Class .
+
+imh:0002079 a owl:Class .
+
+imh:0002080 a owl:Class .
+
+imh:0002082 a owl:Class .
+
+imh:0002083 a owl:Class .
+
+imh:0002090 a owl:Class .
+
+imh:0002100 a owl:Class .
+
+imh:0002102 a owl:Class .
+
+imh:0002112 a owl:NamedIndividual .
+
+imh:0002122 a owl:Class .
+
+imh:0002123 a owl:Class .
+
+imh:0002124 a owl:Class .
+
+imh:0002175 a owl:NamedIndividual .
+
+imh:0002236 a owl:Class .
+
+qunit:MicroM a owl:NamedIndividual .
+
+qunit:RAD a owl:NamedIndividual .
+
+cco:ont00000556 a owl:Class .
+
+cco:ont00000601 a owl:Class .
+
+cco:ont00000771 a owl:Class .
+
+cco:ont00001139 a owl:Class .
+
+cco:ont00001590 a owl:NamedIndividual .
+
+fresh:127 a imh:0001416 ;
+    rdfs:label "time of first line of <http://fresh.com/23>" ;
+    obi:0002135 "1491549849000000000"^^xsd:long .
+
+fresh:17 a cco:ont00000556,
+        ":entity_type" ;
+    rdfs:label "Payload:HYPERN" ;
+    bfo:0000057 fresh:123 ;
+    bfo:0000129 fresh:11,
+        imh:0002112 ;
+    bfo:0000171 fresh:5 .
+
+fresh:2 a imh:0002043,
+        owl:NamedIndividual ;
+    rdfs:label "the ephemeris crs origin reference point" ;
+    bfo:0000171 fresh:5 .
+
+fresh:4 a imh:0001986,
+        owl:NamedIndividual ;
+    rdfs:label "Sensor:HYPERN" ;
+    bfo:0000057 fresh:123 ;
+    bfo:0000129 fresh:12 ;
+    bfo:0000176 fresh:16 .
+
+imh:0002056 a owl:Class .
+
+imh:0002300 a owl:NamedIndividual .
+
+imh:0002433 a owl:Class .
+
+qunit:NanoSEC a owl:Class .
+
+fresh:7 a imh:0002077,
+        owl:NamedIndividual ;
+    rdfs:label "the sensor reference frame" ;
+    imh:0001348 fresh:4 .
+
+fresh:5 a imh:0001112,
+        owl:NamedIndividual,
+        cco:ont00001139 ;
+    rdfs:label "Platform:EO-1" ;
+    bfo:0000057 fresh:123 ;
+    bfo:0000129 fresh:10 .
+
+fresh:16 a cco:ont00000771,
+        ":entity_type" ;
+    rdfs:label "the imaging instrument" ;
+    bfo:0000057 fresh:123 ;
+    bfo:0000171 fresh:17 .
+
+fresh:123 a imh:0002082 ;
+    imh:0001161 fresh:127 ;
+    cco:ont00001986 fresh:23 .
+
+fresh:23 a imh:0000078 ;
+    rdfs:label "The image" ;
+    imh:0001388 "256"^^xsd:integer ;
+    imh:0001391 "3352"^^xsd:integer .
+
+fresh:15 a imh:0001459,
+        owl:NamedIndividual ;
+    imh:0001068 fresh:5,
+        imh:0002300 .
+
+fresh:3 a imh:0002037,
+        owl:NamedIndividual ;
+    rdfs:label "the attitude reference frame" ;
+    imh:0001348 fresh:5 .
+
+imh:0002075 a owl:Class .
+
+cco:ont00001648 a owl:NamedIndividual .
+
+fresh:14 a imh:0001650,
+        owl:NamedIndividual ;
+    imh:0001068 fresh:2,
+        imh:0002300 .
+
+fresh:1 a imh:0002065,
+        owl:NamedIndividual ;
+    rdfs:label "the ephemeris reference frame" ;
+    imh:0001348 fresh:5 ;
+    imh:0002152 fresh:2 .
+
+imh:0002084 a owl:Class .
+
+qunit:M a owl:NamedIndividual .
+
+imh:0001416 a owl:Class .
+
+imh:0010581 a owl:NamedIndividual .
+
