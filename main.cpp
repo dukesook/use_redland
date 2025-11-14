@@ -2,21 +2,21 @@
 #include <iostream>
 #include <redland.h>
 
-void init(librdf_world **world, librdf_storage **storage, librdf_model **model, librdf_parser **parser) {
+static void init(librdf_world **world, librdf_storage **storage, librdf_model **graph, librdf_parser **parser) {
   *world = librdf_new_world();
   librdf_world_open(*world);
   *storage = librdf_new_storage(*world, "memory", NULL, NULL);
-  *model = librdf_new_model(*world, *storage, NULL);
+  *graph = librdf_new_model(*world, *storage, NULL);
   *parser = librdf_new_parser(*world, "turtle", NULL, NULL);
   std::cout << "Redland initialized successfully." << std::endl;
 }
 
-void parse_file(librdf_world *world, librdf_parser *parser, librdf_model *model, const char *filename) {
+static void parse_file(librdf_world *world, librdf_parser *parser, librdf_model *graph, const char *filename) {
   std::cout << "Parsing file..." << std::endl;
   std::string file_uri = "file://" + std::string(realpath(filename, NULL));
   librdf_uri *uri = librdf_new_uri(world, (const unsigned char *)file_uri.c_str());
 
-  if (librdf_parser_parse_into_model(parser, uri, uri, model)) {
+  if (librdf_parser_parse_into_model(parser, uri, uri, graph)) {
     std::cerr << "Failed to parse the RDF file: " << filename << std::endl;
     exit(1);
   }
@@ -25,7 +25,7 @@ void parse_file(librdf_world *world, librdf_parser *parser, librdf_model *model,
   librdf_free_uri(uri);
 }
 
-librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, const char *sparql) {
+static librdf_query_results *execute_sparql(librdf_world *world, librdf_model *graph, const char *sparql) {
   // Create and execute the query
   librdf_query *query = librdf_new_query(world, "sparql", NULL, (const unsigned char *)sparql, NULL);
   if (!query) {
@@ -33,7 +33,7 @@ librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, c
     exit(1);
   }
 
-  librdf_query_results *results = librdf_query_execute(query, model);
+  librdf_query_results *results = librdf_query_execute(query, graph);
   if (!results || librdf_query_results_finished(results)) {
     std::cerr << "No results returned from the SPARQL query." << std::endl;
     exit(1);
@@ -44,7 +44,7 @@ librdf_query_results *execute_sparql(librdf_world *world, librdf_model *model, c
   return results;
 }
 
-std::string create_ephemeris_query(std::string image_id) {
+static std::string create_ephemeris_query(std::string image_id) {
   // clang-format off
     std::string ephemeris_query = 
         "PREFIX obi: <http://purl.obolibrary.org/obo/OBI_> "
@@ -65,13 +65,14 @@ std::string create_ephemeris_query(std::string image_id) {
   // clang-format on
 }
 
-void example_query1(librdf_world *world, librdf_model *model) {
+static void example_query1(librdf_world *world, librdf_model *graph) {
+  // Get the 10 triples from the graph
 
   // Create Query
   const char *sparql_query = "SELECT ?s ?p ?o WHERE { ?s ?p ?o } LIMIT 10";
 
   // Execute Query
-  librdf_query_results *results = execute_sparql(world, model, sparql_query);
+  librdf_query_results *results = execute_sparql(world, graph, sparql_query);
 
   // Print Results
   std::cout << "\nTriples:\n";
@@ -80,9 +81,9 @@ void example_query1(librdf_world *world, librdf_model *model) {
     librdf_node *p = librdf_query_results_get_binding_value(results, 1);
     librdf_node *o = librdf_query_results_get_binding_value(results, 2);
 
-    std::cout << (s ? (const char *)librdf_node_to_string(s) : "(null)") << " ";
-    std::cout << (p ? (const char *)librdf_node_to_string(p) : "(null)") << " ";
-    std::cout << (o ? (const char *)librdf_node_to_string(o) : "(null)") << std::endl;
+    std::cout << (s ? (const char *)librdf_node_get_literal_value(s) : "(null)") << " ";
+    std::cout << (p ? (const char *)librdf_node_get_literal_value(p) : "(null)") << " ";
+    std::cout << (o ? (const char *)librdf_node_get_literal_value(o) : "(null)") << std::endl;
 
     librdf_query_results_next(results);
   }
@@ -91,13 +92,13 @@ void example_query1(librdf_world *world, librdf_model *model) {
   librdf_free_query_results(results);
 }
 
-void example_query2(librdf_world *world, librdf_model *model) {
+static void example_query2(librdf_world *world, librdf_model *graph) {
   // Create Query
   const char *image_id = "http://fresh.com/19"; // unique identifier to specify a particular image
   std::string sparql_query = create_ephemeris_query(image_id);
 
   // Execute Query
-  librdf_query_results *results = execute_sparql(world, model, sparql_query.c_str());
+  librdf_query_results *results = execute_sparql(world, graph, sparql_query.c_str());
 
   // Print Results
   std::cout << "\nEphemeris:\n";
@@ -118,9 +119,9 @@ void example_query2(librdf_world *world, librdf_model *model) {
   librdf_free_query_results(results);
 }
 
-void cleanup(librdf_world *world, librdf_storage *storage, librdf_model *model, librdf_parser *parser) {
+static void cleanup(librdf_world *world, librdf_storage *storage, librdf_model *graph, librdf_parser *parser) {
   librdf_free_parser(parser);
-  librdf_free_model(model);
+  librdf_free_model(graph);
   librdf_free_storage(storage);
   librdf_free_world(world);
 }
@@ -128,23 +129,23 @@ void cleanup(librdf_world *world, librdf_storage *storage, librdf_model *model, 
 int main() {
   librdf_world *world;
   librdf_storage *storage;
-  librdf_model *model;
+  librdf_model *graph;
   librdf_parser *parser;
 
   // Initialize Redland
-  init(&world, &storage, &model, &parser);
+  init(&world, &storage, &graph, &parser);
 
   // Load RDF File
   const char *filename = "sample_rdf_glas.ttl";
-  parse_file(world, parser, model, filename);
+  parse_file(world, parser, graph, filename);
 
   // Execute SPARQL #1
-  example_query1(world, model);
+  example_query1(world, graph);
 
   // Execute SPARQL #2
-  example_query2(world, model);
+  example_query2(world, graph);
 
   // Cleanup
-  cleanup(world, storage, model, parser);
+  cleanup(world, storage, graph, parser);
   return 0;
 }
