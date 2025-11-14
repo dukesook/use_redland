@@ -1,7 +1,9 @@
 # use_redland
-Hello World application for using Redland
+
+Hello World application for using [Redland](https://librdf.org/)
 
 ## Install Dependencies
+
 - Install librdf:
   - `$ sudo apt install librdf0-dev`
 - Install Rasqal
@@ -10,6 +12,7 @@ Hello World application for using Redland
   - `$ sudo apt install libraptor2-dev`
 
 ## Build with CMake
+
 - `$ mkdir build; cd build`
 - `$ cmake ..`
 - `$ make`
