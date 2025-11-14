@@ -49,10 +49,12 @@ static std::string create_ephemeris_query(std::string image_id) {
     std::string ephemeris_query = 
         "PREFIX obi: <http://purl.obolibrary.org/obo/OBI_> "
         "PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> "
+        "PREFIX about: <https://www.commoncoreontologies.org/ont00001808> "
+        "PREFIX cco: <https://www.commoncoreontologies.org/>"
         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
         "PREFIX imh: <http://ontology.mil/foundry/IMH_> "
         "SELECT ?x ?y ?z ?t WHERE { "
-        "  ?ephemeris cco:is_about <" + image_id + ">. "
+        "  ?ephemeris about: <" + image_id + ">. "
         "  ?ephemeris rdf:type imh:0001646. "
         "  ?ephemeris imh:0001670 ?coordinate. "
         "  ?coordinate imh:0001430 ?x. "
@@ -81,9 +83,9 @@ static void example_query1(librdf_world *world, librdf_model *graph) {
     librdf_node *p = librdf_query_results_get_binding_value(results, 1);
     librdf_node *o = librdf_query_results_get_binding_value(results, 2);
 
-    std::cout << (s ? (const char *)librdf_node_get_literal_value(s) : "(null)") << " ";
-    std::cout << (p ? (const char *)librdf_node_get_literal_value(p) : "(null)") << " ";
-    std::cout << (o ? (const char *)librdf_node_get_literal_value(o) : "(null)") << std::endl;
+    std::cout << (s ? (const char *)librdf_node_to_string(s) : "(null)") << " ";
+    std::cout << (p ? (const char *)librdf_node_to_string(p) : "(null)") << " ";
+    std::cout << (o ? (const char *)librdf_node_to_string(o) : "(null)") << std::endl;
 
     librdf_query_results_next(results);
   }
@@ -94,7 +96,7 @@ static void example_query1(librdf_world *world, librdf_model *graph) {
 
 static void example_query2(librdf_world *world, librdf_model *graph) {
   // Create Query
-  const char *image_id = "http://fresh.com/19"; // unique identifier to specify a particular image
+  const char *image_id = "http://fresh.com/23"; // unique identifier to specify a particular image
   std::string sparql_query = create_ephemeris_query(image_id);
 
   // Execute Query
@@ -136,7 +138,7 @@ int main() {
   init(&world, &storage, &graph, &parser);
 
   // Load RDF File
-  const char *filename = "sample_rdf_glas.ttl";
+  const char *filename = "snip_rip_small.ttl";
   parse_file(world, parser, graph, filename);
 
   // Execute SPARQL #1
